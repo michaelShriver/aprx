@@ -954,7 +954,7 @@ void aprsis_start(void) {
 	pthread_attr_init(&pthr_attrs);
 	/* 64 kB stack is enough for this thread (I hope!)
 	   default of 2 MB is way too much...*/
-	pthread_attr_setstacksize(&pthr_attrs, 64*1024);
+	pthread_attr_setstacksize(&pthr_attrs, 78*1024);
 
 	i = pthread_create(&aprsis_thread, &pthr_attrs, (void*)aprsis_runthread, NULL);
 	if (i == 0) {
