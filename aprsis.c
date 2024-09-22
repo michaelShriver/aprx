@@ -952,7 +952,7 @@ void aprsis_start(void) {
 	if (debug) printf("aprsis_start() PTHREAD  socketpair(up=%d,down=%d)\n", aprsis_up, aprsis_down);
 
 	pthread_attr_init(&pthr_attrs);
-	/* 64 kB stack is enough for this thread (I hope!)
+	/* 78 kB stack is enough for this thread (I hope!)
 	   default of 2 MB is way too much...*/
 	pthread_attr_setstacksize(&pthr_attrs, 78*1024);
 
